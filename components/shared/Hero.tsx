@@ -41,7 +41,7 @@ const Hero = () => {
           onClick={() => setShowMobileMenu((prev) => !prev)}
         />
         <div
-          className={`block md:hidden cursor-pointer w-full fixed ${
+          className={`block md:hidden min-w-[350px] overflow-hidden cursor-pointer w-full fixed ${
             !showMobileMenu ? "-top-[410px]" : "top-0"
           } left-0 bg-[#dde0e5] h-[410px] transition-all duration-[800ms] shadow-xl z-10 py-8 px-12 rounded-b-xl`}
         >
