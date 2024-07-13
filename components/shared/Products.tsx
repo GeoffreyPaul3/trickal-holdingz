@@ -17,8 +17,7 @@ const Products = () => {
           </h1>
           <Button
             size="lg"
-            className="flex items-center gap-2 ease-linear transition-all duration-350
-             mx-auto 2xl:mx-0 mb-10 2xl:mb-0 rounded-full font-bold w-full button sm:w-fit bg-blue-500 hover:bg-blue-600"
+            className="flex items-center gap-2 ease-linear transition-all duration-350 mx-auto 2xl:mx-0 mb-10 2xl:mb-0 rounded-full font-bold w-full button sm:w-fit bg-blue-500 hover:bg-blue-600"
           >
             <p className="text-lg lg:text-xl text-white font-medium">
               {productsBtnText}

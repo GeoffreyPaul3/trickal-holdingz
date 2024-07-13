@@ -16,8 +16,7 @@ const Hero = () => {
       className="h-screen relative flex flex-col items-center"
       style={{
         backgroundColor: "#FF3CAC",
-        backgroundImage:
-          "linear-gradient(to right, #4b79a1, #283e51)",
+        backgroundImage: "linear-gradient(to right, #4b79a1, #283e51)",
       }}
     >
       <div className="relative w-full max-w-[1490px] flex items-center justify-between pt-10 mx-auto px-10">
@@ -26,16 +25,15 @@ const Hero = () => {
           <NavLink to="/">Home</NavLink>
           <NavLink to="products">Products</NavLink>
           <NavLink to="services">Services</NavLink>
+          <NavLink to="contact">Contact</NavLink>
         </ul>
 
-        <NavLink to="contact">
-          <Button
-            size="lg"
-            className="rounded-full bg-blue-500 hover:bg-blue-600 hidden md:block"
-          >
-            Contact
-          </Button>
-        </NavLink>
+        <Button
+          size="lg"
+          className="rounded-full bg-blue-500 hover:bg-blue-600 hidden md:block"
+        >
+          Contact
+        </Button>
 
         <MenuSquare
           size={30}
@@ -61,6 +59,9 @@ const Hero = () => {
             </NavLink>
             <NavLink to="services" mobileMenu>
               Services
+            </NavLink>
+            <NavLink to="contact" mobileMenu>
+              Contact
             </NavLink>
           </ul>
         </div>
