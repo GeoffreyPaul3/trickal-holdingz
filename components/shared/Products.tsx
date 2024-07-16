@@ -1,10 +1,20 @@
+"use client";
+
+import { useState } from "react";
 import { products, productsBtnText, productsTitle } from "@/data";
 import FadeIn from "./FadeIn";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import { ArrowBigRight, ExternalLink } from "lucide-react";
+import Link from "next/link";
 
 const Products = () => {
+  const [visibleProducts, setVisibleProducts] = useState(2);
+
+  const handleShowMore = () => {
+    setVisibleProducts(visibleProducts + 2);
+  };
+
   return (
     <div
       id="products"
@@ -18,6 +28,7 @@ const Products = () => {
           <Button
             size="lg"
             className="flex items-center gap-2 ease-linear transition-all duration-350 mx-auto 2xl:mx-0 mb-10 2xl:mb-0 rounded-full font-bold w-full button sm:w-fit bg-blue-500 hover:bg-blue-600"
+            onClick={handleShowMore}
           >
             <p className="text-lg lg:text-xl text-white font-medium">
               {productsBtnText}
@@ -27,7 +38,7 @@ const Products = () => {
         </div>
       </FadeIn>
       <div className="w-full flex flex-col md:flex-row gap-[160px] md:gap-6">
-        {products.map((product, index) => (
+        {products.slice(0, visibleProducts).map((product, index) => (
           <FadeIn
             key={index}
             delay={(index + 1) * 0.2}
@@ -35,26 +46,31 @@ const Products = () => {
             fullWidth
           >
             <div className="h-[510px] relative flex-1 bg-[#c1D0E4] rounded-[50px] max-w-[500px]">
-              <Image
-                src={product.img}
-                alt=""
-                className="absolute -top-[120px] left-1/2 -translate-x-1/2"
-              />
+              <div className="w-full h-[260px] flex items-center justify-center">
+                <Image
+                  src={product.img}
+                  alt={product.title}
+                  width={250}
+                  height={250}
+                  className="object-contain"
+                />
+              </div>
               <div className="absolute bottom-0 w-full bg-white h-[260px] rounded-[50px] shadow-md px-8 py-[26px] flex flex-col justify-between">
                 <div>
                   <h2 className="mb-2 text-black text-3xl lg:text-[32px] font-medium">
                     {product.title}
                   </h2>
-                  <p className="text-sm lg:text-xl text-black font-medium">
-                    Easily exchange currencies and make payments with T Pay.
-                    Secure and reliable services for all your financial needs.
+                  <p className="text-sm lg:text-base text-black font-medium">
+                    {product.description}
                   </p>
                 </div>
                 <div className="flex justify-between items-center">
                   <p className="text-lg lg:text-xl text-black font-medium">
                     Visit Website
                   </p>
-                  <ExternalLink size={25} />
+                  <Link href={product.link} passHref>
+                    <ExternalLink size={25} className="cursor-pointer" />
+                  </Link>
                 </div>
               </div>
             </div>
