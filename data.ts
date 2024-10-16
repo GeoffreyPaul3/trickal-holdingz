@@ -34,11 +34,11 @@ export const products = [
     link: "https://t-pay.vercel.app"
   },
   {
-    title: "Trickal Holdings - Gift Cards",
+    title: "tconnect",
     price: "$75.00",
     img: shippingIcon,
     description: "Empowering your digital gifting experience with a wide range of gift cards.",
-    link: "https://trickal-holdings.vercel.app"
+    link: "https://tconnect-pink.vercel.app"
   },
   {
     title: "Chumalink",
