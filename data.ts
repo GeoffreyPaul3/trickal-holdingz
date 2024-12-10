@@ -1,24 +1,20 @@
-import paymentIcon from "./public/assets/payment.png";
-import shippingIcon from "./public/assets/cards.png";
-import supportIcon from "./public/assets/cryptos.png";
-import chumalinkIcon from "./public/assets/chumalink.png"; 
-import visaCardIcon from "./public/assets/visaCard.png"; 
+import { CreditCard, Gift, Banknote, CreditCardIcon as VisaCard, BarChart } from 'lucide-react'
 
 export const services = [
   {
     title: "Gift Cards",
     subtitle: "Empowering Your Digital Gifting Experience.",
-    icon: shippingIcon,
+    icon: "/placeholder.svg?height=40&width=40",
   },
   {
     title: "Online Payments",
     subtitle: "100% secure online payments with T Pay.",
-    icon: paymentIcon,
+    icon: "/placeholder.svg?height=40&width=40",
   },
   {
     title: "Cryptocurrency",
     subtitle: "Buy, sell and exchange crypto with us.",
-    icon: supportIcon,
+    icon: "/placeholder.svg?height=40&width=40",
   },
 ];
 
@@ -28,30 +24,43 @@ export const productsBtnText = "Explore";
 export const products = [
   {
     title: "T Pay",
-    price: "$65.99",
-    img: paymentIcon,
+    img: "/placeholder.svg?height=300&width=400",
+    icon: CreditCard,
     description: "Easily exchange currencies and make payments with T Pay. Secure and reliable services for all your financial needs.",
-    link: "https://t-pay.vercel.app"
+    link: "https://t-pay.vercel.app",
+    category: "payment"
   },
   {
     title: "tconnect",
-    price: "$75.00",
-    img: shippingIcon,
+    img: "/placeholder.svg?height=300&width=400",
+    icon: Gift,
     description: "Empowering your digital gifting experience with a wide range of gift cards.",
-    link: "https://tconnect-pink.vercel.app"
+    link: "https://tconnect.store",
+    category: "finance"
   },
   {
     title: "Chumalink",
-    price: "$50.00",
-    img: chumalinkIcon,
+    img: "/placeholder.svg?height=300&width=400",
+    icon: Banknote,
     description: "Receive and send money from South Africa with ease using Chumalink.",
-    link: "https://example.com/chumalink"
+    link: "https://example.com/chumalink",
+    category: "payment"
   },
   {
     title: "Visual Visa Cards",
-    price: "$30.00",
-    img: visaCardIcon,
+    img: "/placeholder.svg?height=300&width=400",
+    icon: VisaCard,
     description: "Get both whitelabeled and unwhitelabeled visual visa cards for your convenience.",
-    link: "https://example.com/visa"
+    link: "https://example.com/visa",
+    category: "finance"
+  },
+  {
+    title: "Ledger IQ",
+    img: "/placeholder.svg?height=300&width=400",
+    icon: BarChart,
+    description: "Advanced financial management and analytics tool for businesses.",
+    link: "https://example.com/ledgeriq",
+    category: "finance"
   },
 ];
+
