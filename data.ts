@@ -1,20 +1,20 @@
-import { CreditCard, Gift, Banknote, CreditCardIcon as VisaCard, BarChart } from 'lucide-react'
+import { CreditCard, Gift, Banknote, CreditCardIcon as VisaCard, BarChart } from 'lucide-react';
 
 export const services = [
   {
     title: "Gift Cards",
     subtitle: "Empowering Your Digital Gifting Experience.",
-    icon: "/placeholder.svg?height=40&width=40",
+    icon: Gift, // Replaced with lucide-react icon
   },
   {
     title: "Online Payments",
     subtitle: "100% secure online payments with T Pay.",
-    icon: "/placeholder.svg?height=40&width=40",
+    icon: CreditCard, // Replaced with lucide-react icon
   },
   {
     title: "Cryptocurrency",
     subtitle: "Buy, sell and exchange crypto with us.",
-    icon: "/placeholder.svg?height=40&width=40",
+    icon: Banknote, // Replaced with lucide-react icon
   },
 ];
 
@@ -28,7 +28,7 @@ export const products = [
     icon: CreditCard,
     description: "Easily exchange currencies and make payments with T Pay. Secure and reliable services for all your financial needs.",
     link: "https://t-pay.vercel.app",
-    category: "payment"
+    category: "payment",
   },
   {
     title: "tconnect",
@@ -36,7 +36,7 @@ export const products = [
     icon: Gift,
     description: "Empowering your digital gifting experience with a wide range of gift cards.",
     link: "https://tconnect.store",
-    category: "finance"
+    category: "finance",
   },
   {
     title: "Chumalink",
@@ -44,7 +44,7 @@ export const products = [
     icon: Banknote,
     description: "Receive and send money from South Africa with ease using Chumalink.",
     link: "https://example.com/chumalink",
-    category: "payment"
+    category: "payment",
   },
   {
     title: "Visual Visa Cards",
@@ -52,7 +52,7 @@ export const products = [
     icon: VisaCard,
     description: "Get both whitelabeled and unwhitelabeled visual visa cards for your convenience.",
     link: "https://example.com/visa",
-    category: "finance"
+    category: "finance",
   },
   {
     title: "Ledger IQ",
@@ -60,7 +60,6 @@ export const products = [
     icon: BarChart,
     description: "Advanced financial management and analytics tool for businesses.",
     link: "https://example.com/ledgeriq",
-    category: "finance"
+    category: "finance",
   },
 ];
-
