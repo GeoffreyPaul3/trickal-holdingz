@@ -2,7 +2,6 @@
 
 import { services } from "@/data"
 import { motion } from "framer-motion"
-import Image from "next/image"
 
 const Services = () => {
   return (
@@ -27,13 +26,8 @@ const Services = () => {
             >
               <div className="flex items-center mb-4">
                 <div className="bg-blue-100 rounded-full p-3 mr-4">
-                  <Image
-                    src={service.icon}
-                    width={40}
-                    height={40}
-                    alt={service.title}
-                    className="text-blue-600"
-                  />
+                  {/* Render the Lucide icon as a component */}
+                  <service.icon size={40} className="text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
               </div>
@@ -47,4 +41,3 @@ const Services = () => {
 }
 
 export default Services
-
