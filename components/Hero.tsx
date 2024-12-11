@@ -1,11 +1,11 @@
 'use client'
 
 import { useState, useEffect } from "react"
-import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { ChevronDown } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import ParticleBackground from "./ParticleBackground"
+import Link from "next/link"
 
 const Hero = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -52,11 +52,15 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-10 max-w-md mx-auto sm:flex sm:justify-center md:mt-12"
         >
-          <Button size="lg" className="w-full sm:w-auto px-8 py-3 text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10">
-            Get Started
+          <Button size="lg" className="w-full sm:w-auto px-8 py-3 text-base font-medium rounded-md text-white md:py-4 md:text-lg md:px-10">
+            <Link href="#products">
+             Get Started
+            </Link>
           </Button>
-          <Button size="lg" variant="outline" className="mt-3 sm:mt-0 sm:ml-3 w-full sm:w-auto px-8 py-3 text-base font-medium rounded-md text-blue-300 bg-blue-900 hover:bg-blue-800 md:py-4 md:text-lg md:px-10">
-            Learn More
+          <Button size="lg" variant="secondary" className="mt-3 sm:mt-0 sm:ml-3 w-full sm:w-auto px-8 py-3 text-base font-medium rounded-md text-blue-300 md:py-4 md:text-lg md:px-10">
+           <Link href="#services">
+             Learn More
+           </Link> 
           </Button>
         </motion.div>
       </motion.div>
