@@ -7,6 +7,7 @@ import { Link } from 'react-scroll'
 import { Button } from "@/components/ui/button"
 import { Menu, X } from 'lucide-react'
 
+
 const Header = () => {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -35,7 +36,9 @@ const Header = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
+            <a href="/">
             <Image src="/assets/Trickal.png" width={50} height={50} alt="Trickal Holdings Logo" className="w-auto h-12" />
+            </a>
           </motion.div>
 
           <nav className="hidden md:flex space-x-10">
