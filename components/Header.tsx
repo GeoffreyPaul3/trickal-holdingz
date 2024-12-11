@@ -18,7 +18,7 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const menuItems = ['home', 'services', 'products', 'testimonials']
+  const menuItems = ['home', 'services', 'products',]
 
   return (
     <motion.header
