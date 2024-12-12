@@ -14,13 +14,13 @@ const products = [
   },
   {
     name: 'tconnect',
-    description: 'Seamless gift card management and distribution platform.',
-    image: '/assets/tconnect-home.png',
-  },
-  {
-    name: 'tconnect',
     description: 'Whether for personal use or gifting, our platform offers a seamless experience with multiple payment options.',
     image: '/assets/tconnect.png',
+  },
+  {
+    name: 'tpay',
+    description: 'Quickly and securely send money to friends and family worldwide with TPay.',
+    image: '/assets/tpay2.png',
   },
 ]
 
