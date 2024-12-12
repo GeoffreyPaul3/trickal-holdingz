@@ -7,7 +7,6 @@ import { Link } from 'react-scroll'
 import { Button } from "@/components/ui/button"
 import { Menu, X } from 'lucide-react'
 
-
 const Header = () => {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -18,7 +17,7 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const menuItems = ['home', 'services', 'products',]
+  const menuItems = ['home', 'services', 'products', 'product-showcase', 'partners']
 
   return (
     <motion.header
@@ -36,9 +35,7 @@ const Header = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <a href="/">
             <Image src="/assets/Trickal.png" width={50} height={50} alt="Trickal Holdings Logo" className="w-auto h-12" />
-            </a>
           </motion.div>
 
           <nav className="hidden md:flex space-x-10">
@@ -52,7 +49,7 @@ const Header = () => {
                 duration={500}
                 className="text-white hover:text-blue-300 transition-colors cursor-pointer"
               >
-                {item.charAt(0).toUpperCase() + item.slice(1)}
+                {item === 'product-showcase' ? 'Showcase' : item.charAt(0).toUpperCase() + item.slice(1)}
               </Link>
             ))}
           </nav>
@@ -91,7 +88,7 @@ const Header = () => {
                   className="text-white hover:text-blue-300 transition-colors cursor-pointer block px-3 py-2 rounded-md text-base font-medium"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  {item.charAt(0).toUpperCase() + item.slice(1)}
+                  {item === 'product-showcase' ? 'Showcase' : item.charAt(0).toUpperCase() + item.slice(1)}
                 </Link>
               ))}
               <Button className="w-full mt-4 bg-blue-500 hover:bg-blue-600 text-white" onClick={() => window.location.href = 'mailto:contact@trickalholdings.com'}>

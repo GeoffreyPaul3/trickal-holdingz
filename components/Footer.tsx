@@ -28,7 +28,7 @@ const Footer = () => {
                 <Facebook className="w-6 h-6" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <span className="sr-only">Twitter</span>
+                <span className="sr-only">X</span>
                 <Twitter className="w-6 h-6" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -72,7 +72,7 @@ const Footer = () => {
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Support</h3>
                 <ul className="mt-4 space-y-4">
-                  {['Help Center', 'API Documentation', 'Live Chat', 'Report an Issue'].map((item) => (
+                  {['Help Center', 'Live Chat', 'Report an Issue'].map((item) => (
                     <li key={item}>
                       <Link href="#" className="text-base text-gray-300 hover:text-white transition-colors">
                         {item}
