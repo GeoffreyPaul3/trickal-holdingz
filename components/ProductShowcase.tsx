@@ -20,7 +20,7 @@ const products = [
   {
     name: 'tpay',
     description: 'Quickly and securely send money to friends and family worldwide with TPay.',
-    image: '/assets/tpay2.png',
+    image: '/assets/tpay2.jpg',
   },
 ]
 

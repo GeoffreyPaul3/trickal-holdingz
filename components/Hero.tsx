@@ -65,7 +65,7 @@ const Hero = () => {
              Get Started
             </Link>
           </Button>
-          <Button size="lg" variant="secondary" className="mt-3 sm:mt-0 sm:ml-3 w-full sm:w-auto px-8 py-3 text-base font-medium rounded-md text-blue-400 md:py-4 md:text-lg md:px-10">
+          <Button size="lg" variant="secondary" className="mt-3 sm:mt-0 sm:ml-3 w-full sm:w-auto px-8 py-3 text-base font-medium rounded-md text-blue-500 md:py-4 md:text-lg md:px-10">
            <Link href="#services">
              Learn More
            </Link> 
