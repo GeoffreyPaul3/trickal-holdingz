@@ -24,7 +24,7 @@ const Footer = () => {
               Empowering Your Financial Future with Innovative Solutions and Sustainable Growth Strategies.
             </p>
             <div className="flex space-x-6">
-              <Link href="https://www.facebook.com/profile.php?id=61568004368033" 
+              <Link href="https://www.facebook.com/profile.php?id=61562350618912&mibextid=ZbWKwL" 
               className="text-gray-400 hover:text-white transition-colors"
               target="_blank"
               rel="noopener noreferrer"
@@ -32,7 +32,7 @@ const Footer = () => {
                 <span className="sr-only">Facebook</span>
                 <SiFacebook className="w-6 h-6" />
               </Link>
-              <Link href="https://x.com/tconnect01?t=cDVL2qQ0ctusyeB7O6onpw&s=09" 
+              <Link href="https://x.com/trickalhldsmw?t=GaUNahMgYoKgFeNtij0N2A&s=08" 
               className="text-gray-400 hover:text-white transition-colors"
                target="_blank"
               rel="noopener noreferrer"
@@ -48,7 +48,7 @@ const Footer = () => {
                 <span className="sr-only">LinkedIn</span>
                 <SiLinkedin className="w-6 h-6" />
               </Link>
-              <Link href="https://www.instagram.com/tconnect.mw/profilecard/?igsh=am80OWR6OWZ0MGlp" 
+              <Link href="https://www.instagram.com/trickalholdings.mw/profilecard/?igsh=ZWJqdXlueTlmMjcw" 
               className="text-gray-400 hover:text-white transition-colors"
                target="_blank"
               rel="noopener noreferrer"

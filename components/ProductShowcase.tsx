@@ -8,29 +8,19 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const products = [
   {
-    name: 'T Pay',
-    description: 'Manage all your payments in one place with our intuitive platform.',
-    image: '/placeholder.svg?height=600&width=800',
+    name: 'TPay',
+    description: 'Easily exchange currencies and make payments with TPay. Secure and reliable services for all your financial needs.',
+    image: '/assets/tpay.png',
   },
   {
-    name: 'tconnect Gift Card Interface',
+    name: 'tconnect',
     description: 'Seamless gift card management and distribution platform.',
-    image: '/placeholder.svg?height=600&width=800',
+    image: '/assets/tconnect-home.png',
   },
   {
-    name: 'Chumalink Transfer Form',
-    description: 'Quick and easy money transfers to and from South Africa.',
-    image: '/placeholder.svg?height=600&width=800',
-  },
-  {
-    name: 'Visual Visa Cards Management',
-    description: 'Customize and manage your Visa cards with our user-friendly interface.',
-    image: '/placeholder.svg?height=600&width=800',
-  },
-  {
-    name: 'Ledger IQ Analytics',
-    description: 'Powerful financial analytics and reporting tools at your fingertips.',
-    image: '/placeholder.svg?height=600&width=800',
+    name: 'tconnect',
+    description: 'Whether for personal use or gifting, our platform offers a seamless experience with multiple payment options.',
+    image: '/assets/tconnect.png',
   },
 ]
 
