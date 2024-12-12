@@ -18,6 +18,14 @@ const Hero = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const handleScroll = () => {
+    // Scrolls down by the full window height (e.g., to the next section)
+    window.scrollTo({
+      top: window.innerHeight, // This moves to the next section based on the viewport height
+      behavior: "smooth", // Smooth scroll
+    });
+  };
+
   return (
     <div id="home" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-blue-700 to-blue-500">
       <ParticleBackground />
@@ -66,6 +74,14 @@ const Hero = () => {
       </motion.div>
 
       <motion.div
+      onClick={handleScroll}
+      animate={{ y: [0, 10, 0] }}
+      transition={{ repeat: Infinity, duration: 1.5 }}
+      className="absolute bottom-10 left-1/2 transform -translate-x-1/2 cursor-pointer"
+      aria-hidden="true"
+    >
+      <ChevronDown className="h-8 w-8 text-white" />
+    </motion.div><motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 1.5 }}
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2 cursor-pointer"

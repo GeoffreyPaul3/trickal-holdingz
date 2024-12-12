@@ -1,7 +1,8 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react'
+import { Mail, Phone, MapPin } from 'lucide-react'
 import { Button } from "@/components/ui/button"
+import { SiFacebook, SiInstagram, SiLinkedin, SiX } from "react-icons/si"
 
 const Footer = () => {
   return (
@@ -23,22 +24,38 @@ const Footer = () => {
               Empowering Your Financial Future with Innovative Solutions and Sustainable Growth Strategies.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <Link href="https://www.facebook.com/profile.php?id=61568004368033" 
+              className="text-gray-400 hover:text-white transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              >
                 <span className="sr-only">Facebook</span>
-                <Facebook className="w-6 h-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <SiFacebook className="w-6 h-6" />
+              </Link>
+              <Link href="https://x.com/tconnect01?t=cDVL2qQ0ctusyeB7O6onpw&s=09" 
+              className="text-gray-400 hover:text-white transition-colors"
+               target="_blank"
+              rel="noopener noreferrer"
+              >
                 <span className="sr-only">X</span>
-                <Twitter className="w-6 h-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <SiX className="w-6 h-6" />
+              </Link>
+              <Link href="https://www.linkedin.com/company/trickalholdings"
+              className="text-gray-400 hover:text-white transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              >
                 <span className="sr-only">LinkedIn</span>
-                <Linkedin className="w-6 h-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <SiLinkedin className="w-6 h-6" />
+              </Link>
+              <Link href="https://www.instagram.com/tconnect.mw/profilecard/?igsh=am80OWR6OWZ0MGlp" 
+              className="text-gray-400 hover:text-white transition-colors"
+               target="_blank"
+              rel="noopener noreferrer"
+              >
                 <span className="sr-only">Instagram</span>
-                <Instagram className="w-6 h-6" />
-              </a>
+                <SiInstagram className="w-6 h-6" />
+              </Link>
             </div>
           </div>
           <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
@@ -86,7 +103,7 @@ const Footer = () => {
                 <ul className="mt-4 space-y-4">
                   <li className="flex items-center">
                     <Mail className="w-5 h-5 mr-2 text-gray-400" />
-                    <a href="mailto:info@trickalholdings.com" className="text-gray-300 hover:text-white transition-colors">info@trickalholdings.com</a>
+                    <a href="mailto:info@trickalholdings.com" className="text-gray-300 whitespace-nowrap hover:text-white transition-colors">info@trickalholdings.com</a>
                   </li>
                   <li className="flex items-center">
                     <Phone className="w-5 h-5 mr-2 text-gray-400" />
