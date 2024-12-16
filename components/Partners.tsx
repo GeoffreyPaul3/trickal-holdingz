@@ -9,8 +9,8 @@ const partners = [
   { name: 'Reloadly', logo: '/assets/Reloadly.png' },
   { name: 'Crypto Pay', logo: '/assets/CryptoPay.png' },
   { name: 'NearPay', logo: '/assets/NearPay.jpg' },
-  { name: 'Crypto Pay', logo: '/assets/Veem.png' },
-  { name: 'MTCGame', logo: '/assets/MTCGame.jpg' },
+  { name: 'Veem', logo: '/assets/Veem.png' },
+  { name: 'Karma', logo: '/assets/Karma.jpg' },
 ]
 
 
