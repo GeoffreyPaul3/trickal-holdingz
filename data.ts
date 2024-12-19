@@ -47,7 +47,7 @@ export const products = [
     category: "payment",
   },
   {
-    title: "Visual Visa Cards",
+    title: "Virtual Visa Cards",
     img: "/placeholder.svg?height=300&width=400",
     icon: VisaCard,
     description: "Get both whitelabeled and unwhitelabeled visual visa cards for your convenience.",
