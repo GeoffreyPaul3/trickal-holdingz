@@ -12,19 +12,19 @@ const jobOpenings: Job[] = [
   {
     id: 1,
     title: "Software Engineer",
-    department: "Engineering",
+    department: "IT & Engineering",
     location: "Blantyre, Malawi",
     category: "Technology",
     description: "We are seeking a talented Software Engineer to join our innovative team...",
   },
   {
     id: 2,
-    title: "Product Manager",
-    department: "Product",
-    location: "Lilongwe, Malawi",
+    title: "Social Media Specialist",
+    department: "Marketing",
+    location: "Blantyre, Malawi",
     category: "Management",
     description:
-      "Trickal Holdings is looking for an experienced Product Manager to lead our product development initiatives...",
+      "Trickal Holdings is looking for an experienced Social Media Specialis to lead our social media marketing initiatives...",
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ const jobOpenings: Job[] = [
     id: 4,
     title: "Customer Support Specialist",
     department: "Customer Service",
-    location: "Remote",
+    location: "Blantyre, Malawi",
     category: "Customer Service",
     description:
       "Trickal Holdings is looking for a Customer Support Specialist to provide exceptional service to our clients...",

@@ -101,18 +101,18 @@ export const companyLinks: Section[] = [
   {
     title: "Company",
     links: [
-      { name: 'About', href: '/about' },
+      { name: 'About', href: '#' },
       { name: 'Careers', href: '/careers' },
-      { name: 'Partners', href: '/partners' },
-      { name: 'News', href: '/news' },
+      { name: 'Partners', href: '#partners' },
+      { name: 'News', href: '#' },
     ],
   },
   {
     title: "Support",
     links: [
-      { name: 'Help Center', href: '/help' },
-      { name: 'Live Chat', href: '/chat' },
-      { name: 'Report an Issue', href: '/report' },
+      { name: 'Help Center', href: '#' },
+      { name: 'Live Chat', href: '#' },
+      { name: 'Report an Issue', href: '#' },
     ],
   },
   {

@@ -21,14 +21,16 @@ export default function CareersPage() {
       <header className="bg-white shadow-md">
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           <div className="flex items-center">
-            <Image
-              src="/assets/Trickal.png"
-              width={50}
-              height={50}
-              alt="Trickal Holdings Logo"
-              className="w-auto h-12 mr-3"
-            />
-            <h1 className="text-3xl font-bold text-gray-900">Careers at Trickal Holdings</h1>
+          <Link href="/">
+              <Image
+                src="/assets/Trickal.png"
+                width={50}
+                height={50}
+                alt="Trickal Holdings Logo"
+                className="w-auto h-12 mr-3"
+              />
+              <span className="text-2xl font-bold">Careers at Trickal Holdings</span>
+            </Link>
           </div>
           <Link href="/">
             <Button variant="outline">Back to Home</Button>
