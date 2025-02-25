@@ -1,5 +1,23 @@
 import { CreditCard, Gift, Banknote, CreditCardIcon as VisaCard, BarChart } from 'lucide-react';
 
+import { Mail, Phone, MapPin, type LucideIcon } from 'lucide-react'
+
+type LinkWithoutIcon = {
+  name: string;
+  href: string;
+}
+
+type LinkWithIcon = LinkWithoutIcon & {
+  icon: LucideIcon;
+}
+
+type Link = LinkWithoutIcon | LinkWithIcon;
+
+type Section = {
+  title: string;
+  links: Link[];
+}
+
 export const services = [
   {
     title: "Gift Cards",
@@ -61,5 +79,48 @@ export const products = [
     description: "Advanced financial management and analytics tool for businesses.",
     link: "https://example.com/ledgeriq",
     category: "finance",
+  },
+];
+
+
+
+
+
+
+export const companyLinks: Section[] = [
+  {
+    title: "Solutions",
+    links: [
+      { name: 'T Pay', href: 'https://t-pay.vercel.app' },
+      { name: 'tconnect', href: 'https://tconnect.store' },
+      { name: 'Chumalink', href: 'https://example.com/chumalink' },
+      { name: 'Visual Visa Cards', href: 'https://example.com/visa' },
+      { name: 'Ledger IQ', href: 'https://example.com/ledgeriq' },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { name: 'About', href: '/about' },
+      { name: 'Careers', href: '/careers' },
+      { name: 'Partners', href: '/partners' },
+      { name: 'News', href: '/news' },
+    ],
+  },
+  {
+    title: "Support",
+    links: [
+      { name: 'Help Center', href: '/help' },
+      { name: 'Live Chat', href: '/chat' },
+      { name: 'Report an Issue', href: '/report' },
+    ],
+  },
+  {
+    title: "Contact Us",
+    links: [
+      { name: 'info@trickalholdings.com', href: 'mailto:info@trickalholdings.com', icon: Mail },
+      { name: '+265 997 40 75 98', href: 'tel:+265997407598', icon: Phone },
+      { name: 'Development House, Blantyre, Third Floor, Office 307', href: '#', icon: MapPin },
+    ],
   },
 ];
