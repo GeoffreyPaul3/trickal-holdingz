@@ -34,9 +34,9 @@ export default function CareersPage() {
               alt="Trickal Holdings Logo"
               className="w-auto h-12 mr-3"
             />
-            </Link>
-            <h1 className="text-3xl font-bold text-gray-900">Careers at Trickal Holdings</h1>
+            </Link>          
           </div>
+           <h1 className="text-3xl font-bold text-gray-100">J at Trickal Holdings</h1>
           <Link href="/">
             <Button variant="outline">Back to Home</Button>
           </Link>
