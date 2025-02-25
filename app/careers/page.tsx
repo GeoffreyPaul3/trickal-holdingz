@@ -29,14 +29,14 @@ export default function CareersPage() {
             <Link href="/">
             <Image
               src="/assets/Trickal.png"
-              width={50}
-              height={50}
+              width={80}
+              height={80}
               alt="Trickal Holdings Logo"
               className="w-auto h-12 mr-3"
             />
-            </Link>          
+            </Link>         
           </div>
-           <h1 className="text-3xl font-bold text-gray-100">J at Trickal Holdings</h1>
+   
           <Link href="/">
             <Button variant="outline">Back to Home</Button>
           </Link>
