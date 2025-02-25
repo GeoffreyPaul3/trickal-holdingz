@@ -23,19 +23,19 @@ export default function CareersPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
-      <header className="bg-gray-400 shadow-md">
+      <header className="bg-gradient-to-b from-blue-600 to-indigo-700 shadow-md">
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          <div className="flex items-center">
+           <div className="flex items-center">
             <Link href="/">
-              <Image
-                src="/assets/Trickal.png"
-                width={50}
-                height={50}
-                alt="Trickal Holdings Logo"
-                className="w-auto h-12 mr-3"
-              /> 
-              <h1 className="text-3xl font-bold text-gray-900">Careers at Trickal Holdings</h1>
+            <Image
+              src="/assets/Trickal.png"
+              width={50}
+              height={50}
+              alt="Trickal Holdings Logo"
+              className="w-auto h-12 mr-3"
+            />
             </Link>
+            <h1 className="text-3xl font-bold text-gray-900">Careers at Trickal Holdings</h1>
           </div>
           <Link href="/">
             <Button variant="outline">Back to Home</Button>
