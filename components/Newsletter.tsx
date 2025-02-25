@@ -6,21 +6,58 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { toast } from '@/hooks/use-toast'
 
-
 const Newsletter = () => {
   const [email, setEmail] = useState('')
+  const [loading, setLoading] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Here you would typically send the email to your API
-    console.log('Subscribing email:', email)
-    // Simulating an API call
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    toast({
-      title: "Subscribed!",
-      description: "You've successfully subscribed to our newsletter.",
-    })
-    setEmail('')
+
+    // Basic email validation
+    if (!email || !email.includes('@')) {
+      toast({
+        title: "Invalid email",
+        description: "Please enter a valid email address.",
+        variant: "destructive",
+      })
+      return
+    }
+
+    setLoading(true) 
+
+    try {
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      })
+
+      const result = await response.json()
+
+      if (response.ok) {
+        toast({
+          title: "Subscribed!",
+          description: "You've successfully subscribed to our newsletter.",
+        })
+        setEmail('') 
+      } else {
+        toast({
+          title: "Subscription Error",
+          description: result.error || "Something went wrong. Please try again.",
+          variant: "destructive",
+        })
+      }
+    } catch (error) {
+      toast({
+        title: "Network Error",
+        description: "Unable to reach the server. Please try again later.",
+        variant: "destructive",
+      })
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -56,9 +93,15 @@ const Newsletter = () => {
             onChange={(e) => setEmail(e.target.value)}
             required
             className="w-full sm:w-96 text-gray-900"
+            disabled={loading} 
           />
-          <Button type="submit" size="lg" className="w-full sm:w-auto bg-white text-blue-600 hover:bg-blue-50">
-            Subscribe
+          <Button 
+            type="submit" 
+            size="lg" 
+            className="w-full sm:w-auto bg-white text-blue-600 hover:bg-blue-50"
+            disabled={loading} 
+          >
+            {loading ? 'Subscribing...' : 'Subscribe'}
           </Button>
         </motion.form>
       </div>
@@ -67,4 +110,3 @@ const Newsletter = () => {
 }
 
 export default Newsletter
-
