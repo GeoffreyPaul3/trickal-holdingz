@@ -15,13 +15,18 @@ import type { Job } from "@/types/job"
 
 export default function CareersPage() {
   const [selectedJob, setSelectedJob] = useState<Job | null>(null)
+  const [activeTab, setActiveTab] = useState("openings")
+
+  const handleApply = () => {
+    setActiveTab("apply")
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       <header className="bg-white shadow-md">
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           <div className="flex items-center">
-          <Link href="/">
+            <Link href="/">
               <Image
                 src="/assets/Trickal.png"
                 width={50}
@@ -65,7 +70,7 @@ export default function CareersPage() {
 
           <CompanyCulture />
 
-          <Tabs defaultValue="openings" className="space-y-8" id="job-openings">
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-8" id="job-openings">
             <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="openings">Job Openings</TabsTrigger>
               <TabsTrigger value="apply">Apply Now</TabsTrigger>
@@ -79,7 +84,7 @@ export default function CareersPage() {
                 <CardContent>
                   <div className="grid md:grid-cols-2 gap-4">
                     <JobList onSelectJob={setSelectedJob} />
-                    {selectedJob && <JobDetails job={selectedJob} />}
+                    {selectedJob && <JobDetails job={selectedJob} onApply={handleApply} />}
                   </div>
                 </CardContent>
               </Card>
@@ -101,4 +106,3 @@ export default function CareersPage() {
     </div>
   )
 }
-
