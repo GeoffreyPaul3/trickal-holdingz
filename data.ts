@@ -75,7 +75,7 @@ export const products = [
     img: "/placeholder.svg?height=300&width=400",
     icon: CreditCard,
     description:
-      "Easily exchange currencies and make payments with T Pay. Secure and reliable services for all your financial needs.",
+      "Easily exchange currencies and make payments with TPay. Secure and reliable services for all your financial needs.",
     link: "https://t-pay.vercel.app",
     category: "payment",
   },

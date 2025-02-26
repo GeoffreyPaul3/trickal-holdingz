@@ -38,8 +38,8 @@ const jobDetails: { [key: number]: JobDetail } = {
   },
   2: {
     title: "Graphic Designer",
-    department: "Product",
-    location: "Lilongwe, Malawi",
+    department: "Marketing",
+    location: "Blantyre, Malawi",
     description:
       "We are looking for a talented Graphic Designer to create visually appealing designs that align with our brand and marketing goals. The ideal candidate should have a strong eye for aesthetics, typography, and layout.",
     requirements: [
