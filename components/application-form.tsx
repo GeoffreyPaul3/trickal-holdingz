@@ -135,7 +135,9 @@ export default function ApplicationForm({ selectedJob }: ApplicationFormProps) {
         )}
         {currentStep === 1 && (
           <div>
-            <Label htmlFor="resume">Resume</Label>
+            <Label htmlFor="resume">Resume/CV</Label>
+            <Input id="resume" name="resume" type="file" onChange={handleFileChange} required className="mb-2"/>
+            <Label htmlFor="resume">Copy of highest qualification</Label>
             <Input id="resume" name="resume" type="file" onChange={handleFileChange} required />
           </div>
         )}

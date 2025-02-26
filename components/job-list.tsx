@@ -11,45 +11,28 @@ import type { Job } from "@/types/job"
 const jobOpenings: Job[] = [
   {
     id: 1,
-    title: "Software Engineer",
+    title: "Full Stack Web Developer",
     department: "IT & Engineering",
     location: "Blantyre, Malawi",
     category: "Technology",
-    description: "We are seeking a talented Software Engineer to join our innovative team...",
+    description: "We are seeking a skilled Full Stack Web Developer to develop and maintain our web applications and platforms. The ideal candidate will have experience in both front-end and back-end development, ensuring seamless performance and user experience.",
   },
   {
     id: 2,
-    title: "Social Media Specialist",
-    department: "Marketing",
+    title: "Graphic Designer",
+    department: "Marketing & Design",
     location: "Blantyre, Malawi",
-    category: "Management",
+    category: "Marketing",
     description:
-      "Trickal Holdings is looking for an experienced Social Media Specialis to lead our social media marketing initiatives...",
+      "We are looking for a talented Graphic Designer to create visually appealing designs that align with our brand and marketing goals. The ideal candidate should have a strong eye for aesthetics, typography, and layout.",
   },
   {
     id: 3,
-    title: "Financial Analyst",
-    department: "Finance",
+    title: "Social Media Strategist",
+    department: "Social Media & Marketing",
     location: "Blantyre, Malawi",
-    category: "Finance",
-    description: "We are seeking a detail-oriented Financial Analyst to join our finance team...",
-  },
-  {
-    id: 4,
-    title: "Customer Support Specialist",
-    department: "Customer Service",
-    location: "Blantyre, Malawi",
-    category: "Customer Service",
-    description:
-      "Trickal Holdings is looking for a Customer Support Specialist to provide exceptional service to our clients...",
-  },
-  {
-    id: 5,
-    title: "Marketing Coordinator",
-    department: "Marketing",
-    location: "Blantyre, Malawi",
-    category: "Marketing",
-    description: "We are seeking a creative and organized Marketing Coordinator to join our marketing team...",
+    category: "Makerting",
+    description: "We are looking for a creative and analytical Social Media Strategist to manage and grow our online presence. The ideal candidate will develop and implement effective social media strategies to enhance brand awareness, drive engagement, and increase conversions.",
   },
 ]
 

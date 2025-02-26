@@ -12,7 +12,7 @@ export async function POST(request: Request) {
   try {
     // Send email to the applicant
     await resend.emails.send({
-      from: "Trickal Holdings <trickalholdings@gmail.com>",
+      from: "Trickal Holdings <no-reply@trickalholdings.com>",
       to: email,
       subject: "Application Received - Trickal Holdings",
       react: ApplicantEmail({ name, jobTitle }),
@@ -20,7 +20,7 @@ export async function POST(request: Request) {
 
     // Send email to the company
     await resend.emails.send({
-      from: "Trickal Holdings Careers <trickalholdings@gmail.com>",
+      from: "Trickal Holdings Careers <no-reply@trickalholdings.com",
       to: "trickalholdings@gmail.com",
       subject: `New Application: ${jobTitle}`,
       react: CompanyEmail({ name, email, phone, jobTitle }),
