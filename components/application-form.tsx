@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -24,6 +23,7 @@ export default function ApplicationForm({ selectedJob }: ApplicationFormProps) {
     email: "",
     phone: "",
     resume: null as File | null,
+    qualification: null as File | null,
     coverLetter: "",
   })
   const [currentStep, setCurrentStep] = useState(0)
@@ -37,25 +37,27 @@ export default function ApplicationForm({ selectedJob }: ApplicationFormProps) {
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0] || null
-    setFormData((prev) => ({ ...prev, resume: file }))
+    setFormData((prev) => ({ ...prev, [e.target.name]: file }))
   }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
 
+    const formDataToSend = new FormData()
+    Object.entries(formData).forEach(([key, value]) => {
+      if (value instanceof File) {
+        formDataToSend.append(key, value)
+      } else if (value !== null) {
+        formDataToSend.append(key, value.toString())
+      }
+    })
+    formDataToSend.append('jobTitle', selectedJob?.title || "Unknown Position")
+
     try {
       const response = await fetch("/api/submit-application", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          jobTitle: selectedJob?.title || "Unknown Position",
-        }),
+        body: formDataToSend,
       })
 
       if (response.ok) {
@@ -134,12 +136,16 @@ export default function ApplicationForm({ selectedJob }: ApplicationFormProps) {
           </>
         )}
         {currentStep === 1 && (
-          <div>
-            <Label htmlFor="resume">Resume/CV</Label>
-            <Input id="resume" name="resume" type="file" onChange={handleFileChange} required className="mb-2"/>
-            <Label htmlFor="resume">Copy of highest qualification</Label>
-            <Input id="resume" name="resume" type="file" onChange={handleFileChange} required />
-          </div>
+          <>
+            <div>
+              <Label htmlFor="resume">Resume/CV</Label>
+              <Input id="resume" name="resume" type="file" onChange={handleFileChange} required className="mb-2"/>
+            </div>
+            <div>
+              <Label htmlFor="qualification">Copy of highest qualification</Label>
+              <Input id="qualification" name="qualification" type="file" onChange={handleFileChange} required />
+            </div>
+          </>
         )}
         {currentStep === 2 && (
           <div>
