@@ -19,12 +19,12 @@ const jobOpenings: Job[] = [
   },
   {
     id: 2,
-    title: "Graphic Designer",
-    department: "Marketing & Design",
+    title: "Marketing Intern",
+    department: "Marketing",
     location: "Blantyre, Malawi",
     category: "Marketing",
     description:
-      "We are looking for a talented Graphic Designer to create visually appealing designs that align with our brand and marketing goals. The ideal candidate should have a strong eye for aesthetics, typography, and layout.",
+      "We are looking for a motivated and eager Marketing Intern to support our marketing team in Blantyre. The ideal candidate will assist in various marketing activities, including social media management, content creation, and market research.",
   },
   {
     id: 3,
