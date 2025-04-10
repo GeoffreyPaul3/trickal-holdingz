@@ -52,6 +52,13 @@ const Products = () => {
           >
             Finance
           </Button>
+          <Button
+            onClick={() => setFilter('finance')}
+            variant={filter === 'education' ? 'default' : 'outline'}
+            className="rounded-full"
+          >
+            Education
+          </Button>
         </div>
 
         <AnimatePresence>
