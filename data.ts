@@ -54,6 +54,11 @@ export const services = [
     icon: Bot, // Lucide icon for AI
   },
   {
+    title: "Forex Trading",
+    subtitle: "Trade currencies with competitive rates and expert insights.",
+    icon: Banknote,
+  },
+  {
     title: "Digital Marketing",
     subtitle: "Data-driven strategies to boost your online presence.",
     icon: BarChart, // Lucide icon for marketing
@@ -87,6 +92,15 @@ export const products = [
       "Empowering your digital gifting experience with a wide range of gift cards.",
     link: "https://tconnect.store",
     category: "finance",
+  },
+  {
+    title: "TFx Edu",
+    img: "/placeholder.svg?height=300&width=400",
+    icon: BarChart,
+    description:
+      "Transform your trading skills with our expert-led courses. Learn proven strategies, advanced technical analysis, and risk management techniques used by professional traders.",
+    link: "https://forex-learn-scape.vercel.app",
+    category: "education",
   },
   {
     title: "Chumalink",
