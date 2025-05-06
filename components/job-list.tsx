@@ -11,11 +11,11 @@ import type { Job } from "@/types/job"
 const jobOpenings: Job[] = [
   {
     id: 1,
-    title: "Full Stack Web Developer",
+    title: "Full Stack Web Developer (Talented Female Candidate Preferred)",
     department: "IT & Engineering",
     location: "Blantyre, Malawi",
     category: "Technology",
-    description: "We are seeking a skilled Full Stack Web Developer to develop and maintain our web applications and platforms. The ideal candidate will have experience in both front-end and back-end development, ensuring seamless performance and user experience.",
+    description: "We are seeking a skilled Full Stack Web Developer—ideally a talented female engineer—to develop and maintain our web applications and platforms. We strongly encourage and welcome applications from women; preference will be given to exceptional female candidates to strengthen the diversity and innovation within our team.",
   },
   {
     id: 2,
